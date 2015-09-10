@@ -1,3 +1,6 @@
+// uncomment this to enable snapshot versions
+//resolvers += Resolver.sonatypeRepo("snapshots")
+
 libraryDependencies ++= List(
   "com.typesafe.slick" %% "slick" % "3.0.0"
   ,"com.typesafe.slick" %% "slick-codegen" % "3.0.0"
