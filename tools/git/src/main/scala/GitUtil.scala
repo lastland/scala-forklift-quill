@@ -6,12 +6,12 @@ import com.liyaos.forklift.core.tools.{GitUtil => Git}
 import com.liyaos.forklift.tools.git.Installer
 
 class MyGitUtil(db: H2MigrationDatabase)
-    extends Git(db, System.getProperty("user.dir") + "/../.git") {
+    extends Git(db, System.getProperty("user.dir") + "/.git") {
   override def run(args: List[String]) {
     args match {
       case "install" :: Nil =>
         val currentDir = System.getProperty("user.dir")
-        Installer.install("which sbt".!!.trim, currentDir + "/../.git",
+        Installer.install("which sbt".!!.trim, currentDir + "/.git",
           currentDir, "git-tools")
       case "rebuild" :: Nil =>
         db.rebuild()
