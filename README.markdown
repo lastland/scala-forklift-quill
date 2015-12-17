@@ -97,3 +97,7 @@ Then checkout the application:
 Different with Slick, Quill uses probes to check if a database schema matches the Scala queries at compile time. This is why some code fragments in `Migrations.scala` has to be commentted out at first: `migrations` table was not created until `mg init` was executed.
 
 This may not be a problem if this part of code was in the library, because it has already been compiled. However, this will still cause troubles when users want to extend the library.
+
+## Others
+
+For more information on Scala-Forklift, please refer to https://github.com/lastland/scala-forklift. A more detailed example of using Slick can be found here: https://github.com/lastland/scala-forklift/tree/develop/example
