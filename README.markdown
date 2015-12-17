@@ -35,7 +35,7 @@ Then find the code in `migrations/src/main/scala/Migrations.scala`, uncomment th
         }
     }
 
-And comment the following code:
+And comment out the following code:
 
     override def alreadyAppliedIds = List()
 
@@ -62,7 +62,15 @@ Once the `users` table is created, you can run the application code:
     List()
     [success] Total time: 0 s, completed
 
-To add some data into this list, execute the next migration:
+To add some data into this list, we need to execute the next migration defined in `migrations/src_migrations/main/scala/2.scala`:
+
+    val insert = quote {
+        (id: Int, name: String) => query[Users].insert(_.id -> id, _.name -> name)
+    }
+    db.run(insert).using(List((1, "Harry Potter"),
+        (2, "Ron Weasley"), (3, "Hermione Granger")))
+
+Apply the migration in your sbt:
 
     > mg update
     [info] Running MyMigrations update
