@@ -1,10 +1,10 @@
-import scala.concurrent.duration._
-import scala.concurrent.Await
-import scala.concurrent.ExecutionContext.Implicits.global
-import slick.driver.H2Driver.api._
+import io.getquill._
 
 object Application {
   def main(args: Array[String]) {
-    println("Hello World!")
+    val users = quote {
+      query[Users].map(_.name)
+    }
+    println(db.run(users))
   }
 }

@@ -1,6 +1,6 @@
 libraryDependencies ++= List(
-  "com.typesafe.slick" %% "slick" % "3.0.0"
-  ,"com.zaxxer" % "HikariCP" % "2.3.9"
-  ,"org.scala-lang" % "scala-compiler" % "2.11.6"
-  ,"com.h2database" % "h2" % "1.3.166"
+  "com.liyaos" %% "scala-forklift-core" % "0.2.0-BETA"
+  ,"mysql" % "mysql-connector-java" % "5.1.36"
+  ,"io.getquill" %% "quill-jdbc" % "0.1.0"
+  ,"com.zaxxer" % "HikariCP" % "2.4.1"
 )
