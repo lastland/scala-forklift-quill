@@ -4,7 +4,7 @@ This is a simple demonstration of using [Scala-Forklift](https://github.com/last
 
 *Note* : Don't directly compile the project in your `sbt`. If you haven't run any of the commands listed below, it will fail.
 
-Clone this repo, then enter `sbt` in the project root. Type the following command in your sbt:
+Clone this repo. Edit the database configuration in `app/src/main/resources/application.conf` to your database settings. Once it's done, enter `sbt` in the project root. Type the following command in your sbt:
 
     > mg init
     [info] Running MyMigrations init
